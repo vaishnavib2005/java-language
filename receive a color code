@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    char arr=sc.next().charAt(0);
+	    if(arr=='G'){
+	        	System.out.println("Green");
+	    }
+	    else if(arr=='B'){
+	       System.out.println("Blue"); 
+	    }
+	    else if(arr=='R'){
+	        	System.out.println("Red");
+	    }
+	    else if(arr=='O'){
+	        System.out.println("Orange");
+	    }
+	     else if(arr=='Y'){
+	        System.out.println("Yellow");
+	    }
+	    else if(arr=='W'){
+	        System.out.println("White");
+	    }
+	    else{
+	        System.out.println("Invalied");
+	    }
+	
+	}
+}
