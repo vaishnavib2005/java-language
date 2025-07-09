@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class Box {
+	int width;
+	int height;
+	int depth;
+Box(int w,int h,int d)
+{
+	width=w;
+	height=h;
+	depth=d;
+}
+int dimensions(int w,int h,int d)
+{
+	System.out.println(w);
+	System.out.println(h);
+	System.out.println(d);
+	int x=w*h*d;
+	System.out.println(x);
+	return x;
+	
+}
+	public static void main(String[] args) {
+	 Box B=new Box(12,4,2);	
+	 B.dimensions(12,4,2);
+	}
+
+}
