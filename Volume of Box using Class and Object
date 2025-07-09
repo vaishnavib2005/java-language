@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class Box{
+    int a,b,c,d;
+   void add(int width,int hight,int depth ){
+         a=width;
+         b=hight;
+         c=depth;
+         d=a*b*c;
+        System.out.println(d);
+        }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	Box obj=new Box();
+	obj.add(2,4,6);
+	}
+    
+}
