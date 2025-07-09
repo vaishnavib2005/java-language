@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class Calculator {
+	static int powerInt(int num1,int num2)
+	{
+		int a=(int) Math.pow(num1, num2);
+		System.out.println(a);
+		return a;
+	}
+	static int powerDouble(double num1,double num2)
+	{
+		double b=Math.pow(num1, num2);
+		System.out.println(b);
+		return (int) b;
+	}
+}
+class Main{
+	public static void main(String[] args) {
+		Calculator c=new Calculator();
+		int num1,num2;
+		c.powerInt(5,8);
+		c.powerDouble(22,20);
+	}
+
+}
