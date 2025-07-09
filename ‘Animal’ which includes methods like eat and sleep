@@ -1,0 +1,29 @@
+class Animal{
+    void eat(){
+     System.out.print("the Animal is eating");
+    }
+     void sleep(){
+         System.out.println("the animal is sleeping");
+     }
+}
+     class Bird extends Animal{
+         void eat()
+         {
+             System.out.println("the bird is eating");}
+             void fly(){
+             System.out.println("the bird is flying");
+         }
+     }
+         class Main{
+             public static void main(String[] args)
+             {
+                 Animal v1=new Animal();
+                 v1.eat();
+                 v1.sleep();
+                 Bird v2=new Bird();
+                 v2.eat();
+                 v2.sleep();
+                 v2.fly();
+             }
+         }
+     
