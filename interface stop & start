@@ -1,0 +1,31 @@
+interface Vechical{
+    void Vechicalstart();
+    default void Vechicalstop()
+    {
+        System.out.println("Vechical Stop");
+    }
+}
+interface Bike extends Vechical{
+    void Bikestart();
+    default void Bikestop(){
+        System.out.println("Bike Stop");
+        this.Vechicalstop();
+    }
+}
+class Car implements Vechical,Bike{
+    public void Vechicalstart(){
+        System.out.println("Vechical start");
+        Bike.super.Bikestop();
+    }
+    public void Bikestart(){
+        System.out.println("Bike start");
+        this.Vechicalstart();
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Car c=new Car();
+	    c.Bikestart();
+	}
+}
