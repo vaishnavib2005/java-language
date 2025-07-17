@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        int num = 3, n = 4;
+        for (int i = 1; i <= n; i++) {
+            if (i == n) {
+                System.out.print(num);
+            } else {
+                System.out.print(num + ",");
+                num = num * 10 + 3;
+            }
+        }
+    }
+}
