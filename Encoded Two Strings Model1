@@ -1,0 +1,34 @@
+import java.util.Scanner;
+ class  Main {
+ public static String[] splitWord(String word) {
+        int n = word.length();
+        int partLen = n / 3;
+        String part1, part2, part3;
+        if (n % 3 == 0) {
+            part1 = word.substring(0, partLen);
+            part2 = word.substring(partLen, partLen * 2);
+            part3 = word.substring(partLen * 2);
+        } else {
+            part1 = word.substring(0, partLen);
+            part3 = word.substring(n - partLen);
+            part2 = word.substring(partLen, n - partLen);
+        }
+       return new String[] { part1, part2, part3 };
+    }
+        public static String generatePassword(String word1, String word2) {
+        String[] partsWord1 = splitWord(word1);
+        String[] partsWord2 = splitWord(word2);
+        String password = partsWord2[0] + partsWord1[0] + partsWord1[2] + partsWord2[2];
+        return password;
+    }
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first word: ");
+        String input1 = sc.nextLine();
+        System.out.print("Enter second word: ");
+        String input2 = sc.nextLine();
+        String password = generatePassword(input1, input2);
+        System.out.println("Generated Password: " + password);
+        sc.close();
+    }
+}
